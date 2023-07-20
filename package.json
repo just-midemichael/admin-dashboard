@@ -33,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-query": "^3.39.3",
+    "react-router-dom": "v6",
     "yup": "^1.2.0"
   },
   "devDependencies": {
