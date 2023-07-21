@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+
+html,
+body,
+#root,
+.App,
+.Content {
+    height: 100%;
+    width: 100%;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.App {
+    display: flex;
+    position: relative;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Scroll bar Track */
+::-webkit-scrollbar-track {
+    background: white;
+}
+/* Scroll bar handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+/* Scroll bar handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
