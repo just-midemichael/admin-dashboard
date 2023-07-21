@@ -1,3 +1,5 @@
+import { PageRouter } from './routes/PageRouter'
+import SideBar from './scenes/global/SideBar';
 import TopBar from './scenes/global/TopBar';
 import { ColorModeContext } from './themes/colorModeContext';
 import { useMode } from './themes/theme';
@@ -12,8 +14,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline/>
           <div className='app'>
+          <SideBar/>
             <main className='content'>
               <TopBar/>
+                <PageRouter/>
+  
             </main>
           </div>
       </ThemeProvider>
