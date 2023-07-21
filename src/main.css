@@ -3,14 +3,14 @@
 html,
 body,
 #root,
-.App,
+.app,
 .Content {
     height: 100%;
     width: 100%;
     font-family: 'PT Sans Caption', sans-serif;
 }
 
-.App {
+.app {
     display: flex;
     position: relative;
 }
@@ -25,7 +25,7 @@ body,
 }
 /* Scroll bar handle */
 ::-webkit-scrollbar-thumb {
-    background: white;
+    background: gray;
 }
 /* Scroll bar handle hover effect */
 ::-webkit-scrollbar-thumb:hover {

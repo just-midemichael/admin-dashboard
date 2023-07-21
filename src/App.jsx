@@ -1,22 +1,23 @@
+import { useState } from 'react';
 import { PageRouter } from './routes/PageRouter'
 import SideBar from './scenes/global/SideBar';
 import TopBar from './scenes/global/TopBar';
 import { ColorModeContext } from './themes/colorModeContext';
 import { useMode } from './themes/theme';
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 function App() {
   const [theme, colorMode] = useMode();
+  const [isSidebar, setIsSidebar] = useState(true);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
           <div className='app'>
-            <SideBar/>
+            <SideBar isSidebar={isSidebar}/>
             <main className='content'>
-              <TopBar/>
+              <TopBar setIsSidebar={setIsSidebar}/>
                 <PageRouter/>
             </main>
           </div>
