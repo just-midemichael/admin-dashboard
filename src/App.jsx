@@ -14,11 +14,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline/>
           <div className='app'>
-          <SideBar/>
+            <SideBar/>
             <main className='content'>
               <TopBar/>
                 <PageRouter/>
-  
             </main>
           </div>
       </ThemeProvider>
