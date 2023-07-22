@@ -14,13 +14,20 @@ const TopBar = () => {
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
   return (
-    <Box display='flex' justifyContent='space-between' p={2} pt={1}>
+    <Box 
+        display='flex' 
+        justifyContent='space-between' p={2} pt={1} 
+        position="sticky" top="0"
+        backgroundColor={colors.primary[400]}
+    >
 
     {/* create search bar */}
-        <Box    display="flex" 
-                backgroundColor={colors.primary[400]} 
-                borderRadius="4px"  
-                sx={{ p: 0.25 }}>
+        <Box    
+            display="flex" 
+            backgroundColor={colors.primary[900]} 
+            borderRadius="4px"  
+            sx={{ p: 0.25 }}
+        >
             <InputBase sx={{ ml: 2, flex: 1}} placeholder="search"/>
             <IconButton type="button" sx={{ p:1 }}>
                 <SearchOutlinedIcon />
