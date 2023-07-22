@@ -4,7 +4,7 @@ html,
 body,
 #root,
 .app,
-.Content {
+.content {
     height: 100%;
     width: 100%;
     font-family: 'PT Sans Caption', sans-serif;
