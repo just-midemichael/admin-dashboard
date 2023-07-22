@@ -60,10 +60,30 @@ const SideBar = () => {
         },
       }}
     >
-      <Sidebar collapsed={isCollapsed} style={{borderRight: "2px solid transparent"}}>
+      <Sidebar 
+        collapsed={isCollapsed}
+        rootStyles={{
+          borderRight: "0",
+        }}
+      >
         <Menu 
           iconShape="square" 
-          style={{backgroundColor:`${colors.primary[400]}`}}>
+          style={{backgroundColor:`${colors.primary[400]}`}}
+          menuItemStyles={{
+            button: ({ level, active, disabled, }) => {
+              // only apply styles on first level elements of the tree
+              if (level === 0)
+                return {
+                  color: disabled ? '#f5d9ff' : '#d359ff',
+                  backgroundColor: active ? `${colors.primary[900]}` : undefined,
+                  borderRadius: "50px 0 0 50px",
+                  "&:hover": {
+                    backgroundColor: active ? `${colors.primary[900]}` : "transparent",
+                  }
+                };
+            },
+          }}
+          >
           {/* Logo and Menu icon items*/}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -71,6 +91,7 @@ const SideBar = () => {
             style={{
               margin: "0 0 20px 0",
               color: colors.grey[100],
+              borderRadius: "0",
             }}
           >
             {!isCollapsed && (
@@ -113,7 +134,11 @@ const SideBar = () => {
                   >
                     Olumide Michael
                   </Typography>
-                  <Typography variant="h5" color={colors.greenAccent[500]}>
+                  <Typography 
+                    variant="h5" 
+                    color={colors.greenAccent[500]} 
+                    fontWeight={900}
+                  >
                     Chief Admin
                   </Typography>
                 </Box>
