@@ -123,8 +123,8 @@ const SideBar = () => {
                   </Typography>
                   <Typography 
                     variant="h6" 
-                    color={colors.greenAccent[500]} 
-                    fontWeight={900}
+                    color={colors.blueAccent[500]} 
+                    fontWeight={600}
                   >
                     Chief Admin
                   </Typography>
