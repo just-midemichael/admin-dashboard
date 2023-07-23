@@ -67,7 +67,19 @@ export const themeSettings = (mode) => {
             h6: {
                 fontFamily: ['PT Sans Caption', 'sans-serif'].join(","),
                 fontSize: 14,
-            }
+            },
+            h7: {
+                fontFamily: ['PT Sans Caption', 'sans-serif'].join(","),
+                fontSize: 12,
+            },
+            h8: {
+                fontFamily: ['PT Sans Caption', 'sans-serif'].join(","),
+                fontSize: 10,
+            },
+            h9: {
+                fontFamily: ['PT Sans Caption', 'sans-serif'].join(","),
+                fontSize: 8,
+            },
         }
     }
 }

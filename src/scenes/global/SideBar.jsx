@@ -25,12 +25,12 @@ const Item = ({ title, to, icon, selected, setSelected}) => {
   return (
     <MenuItem
       active={selected === title}
-      style={{color: colors.grey[400]}}
+      style={{color: colors.grey[200],}}
       onClick={() => setSelected(title)}
       icon={icon}
       component={<Link to={to}/>}
     >
-      <Typography>{title}</Typography>
+      <Typography variant="h7">{title}</Typography>
     </MenuItem>
   )
 }
@@ -41,44 +41,28 @@ const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
   return (
-    <Box
-      sx={{
-        "& .pro-sidebar-inner": {
-          background: `${colors.primary[400]} !important`,
-        },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
-        },
-        "& .pro-inner-item": {
-          padding: "0px 35px 5px 20px !important",
-        },
-        "& .pro-inner-item:hover": {
-          color: "#868dfb !important",
-        },
-        "& .pro-menu-item.active": {
-          color: "#6870fa !important",
-        },
-      }}
-    >
+    <Box>
       <Sidebar 
         collapsed={isCollapsed}
         rootStyles={{
           borderRight: "0",
+          position: "relative",
+          height: "100%",
         }}
+        backgroundColor={`${colors.primary[800]}`}
       >
         <Menu 
           iconShape="square" 
-          style={{backgroundColor:`${colors.primary[400]}`}}
           menuItemStyles={{
-            button: ({ level, active, disabled, }) => {
+            button: ({ level, active, disabled,}) => {
               // only apply styles on first level elements of the tree
               if (level === 0)
                 return {
                   color: disabled ? '#f5d9ff' : '#d359ff',
-                  backgroundColor: active ? `${colors.primary[900]}` : undefined,
-                  borderRadius: "50px 0 0 50px",
+                  backgroundColor: active ? `${colors.primary[400]}` : undefined,
+                  borderRadius: isCollapsed ? "0%" : "50px 0 0 50px",
                   "&:hover": {
-                    backgroundColor: active ? `${colors.primary[900]}` : "transparent",
+                    backgroundColor: active ? `${colors.primary[400]}` : "transparent",
                   }
                 };
             },
@@ -92,6 +76,8 @@ const SideBar = () => {
               margin: "0 0 20px 0",
               color: colors.grey[100],
               borderRadius: "0",
+              width: "100%",
+              height: "60px",
             }}
           >
             {!isCollapsed && (
@@ -100,8 +86,9 @@ const SideBar = () => {
                 justifyContent="space-between"
                 alignItems="center"
                 ml="15px"
+                
                 >
-                  <Typography variant="h4" color={colors.grey[100]}>
+                  <Typography variant="h5" color={colors.grey[100]}>
                     JMM-ADMIN
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -118,8 +105,8 @@ const SideBar = () => {
                   <img
                     src={ProfilePicture}
                     alt="admin-avatar"
-                    width="80px"
-                    height="80px"
+                    width="100px"
+                    height="100px"
                     style={{cursor: "pointer", borderRadius: "50%"}}
                   />
                 </Box>
@@ -135,7 +122,7 @@ const SideBar = () => {
                     Olumide Michael
                   </Typography>
                   <Typography 
-                    variant="h5" 
+                    variant="h6" 
                     color={colors.greenAccent[500]} 
                     fontWeight={900}
                   >
@@ -145,7 +132,7 @@ const SideBar = () => {
               </Box>
             )}
 
-            <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Box paddingLeft={isCollapsed ? undefined : "5%"}>
               <Item
                 title="Dashboard"
                 to="/"

@@ -18,7 +18,9 @@ function App() {
             <SideBar isSidebar={isSidebar}/>
             <main className='content'>
               <TopBar setIsSidebar={setIsSidebar}/>
+              <div className='inner-content'>
                 <PageRouter/>
+              </div>
             </main>
           </div>
       </ThemeProvider>

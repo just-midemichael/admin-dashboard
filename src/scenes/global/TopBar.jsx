@@ -16,7 +16,7 @@ const TopBar = () => {
   return (
     <Box 
         display='flex' 
-        justifyContent='space-between' p={2} pt={1} 
+        justifyContent='space-between' p={2} pt={1} pb={1}
         position="sticky" top="0"
         backgroundColor={colors.primary[400]}
     >
@@ -24,7 +24,7 @@ const TopBar = () => {
     {/* create search bar */}
         <Box    
             display="flex" 
-            backgroundColor={colors.primary[900]} 
+            backgroundColor={colors.primary[800]} 
             borderRadius="4px"  
             sx={{ p: 0.25 }}
         >
@@ -35,19 +35,19 @@ const TopBar = () => {
         </Box>
 
         {/* Icons */}
-        <Box display="flex">
-            <IconButton onClick={colorMode.toggleColorMode}>
+        <Box display="flex" gap={1}>
+            <IconButton onClick={colorMode.toggleColorMode} title="Mode">
                 {theme.palette.mode === "dark" 
                 ? (<DarkModeOutlinedIcon/>) : (<LightModeOutlinedIcon/>)
                 }
             </IconButton>
-            <IconButton>
+            <IconButton title="Notification">
                 <NotificationsOutlinedIcon/>
             </IconButton>
-            <IconButton>
+            <IconButton title="Settings">
                 <SettingsOutlinedIcon/>
             </IconButton>
-            <IconButton>
+            <IconButton title="User">
                 <PersonOutlinedIcon/>
             </IconButton>
         </Box>

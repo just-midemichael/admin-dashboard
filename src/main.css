@@ -15,19 +15,24 @@ body,
     position: relative;
 }
 
+.inner-content {
+    padding: 20px;
+}
+
 /* Scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
+    border-radius: 10px;
 }
 /* Scroll bar Track */
 ::-webkit-scrollbar-track {
-    background: white;
+    background: rgba(255, 255, 255, 0);
 }
 /* Scroll bar handle */
 ::-webkit-scrollbar-thumb {
-    background: gray;
+    background: grey;
 }
 /* Scroll bar handle hover effect */
 ::-webkit-scrollbar-thumb:hover {
-    background: black;
+    background: grey;
 }
