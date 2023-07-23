@@ -27,7 +27,7 @@ const Item = ({ title, to, icon, selected, setSelected}) => {
       active={selected === title}
       style={{color: colors.grey[200],}}
       onClick={() => setSelected(title)}
-      icon={icon}
+      icon={<IconButton title={title}>{icon}</IconButton>}
       component={<Link to={to}/>}
     >
       <Typography variant="h7">{title}</Typography>
