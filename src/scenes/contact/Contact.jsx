@@ -4,7 +4,7 @@ import Header from "../../components/admin/header/Header"
 const Contact = () => {
   return (
     <Box>
-      <Header title={"Contact"}/>
+      <Header title={"Contact"} subtitle={"Contact information"}/>
     </Box>
   )
 }

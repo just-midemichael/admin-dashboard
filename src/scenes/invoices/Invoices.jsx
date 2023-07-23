@@ -5,7 +5,7 @@ import Header from "../../components/admin/header/Header"
 export const Invoices = () => {
   return (
     <Box>
-      <Header title={"Invoices"}/>
+      <Header title={"Invoices"} subtitle={"View your invoices"}/>
     </Box>
   )
 }

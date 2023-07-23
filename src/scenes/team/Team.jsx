@@ -4,7 +4,7 @@ import Header from "../../components/admin/header/Header"
 export const Team = () => {
   return (
     <Box>
-      <Header title={"Team"}/>
+      <Header title={"Team"} subtitle={"Mange your team"}/>
     </Box>
   )
 }
