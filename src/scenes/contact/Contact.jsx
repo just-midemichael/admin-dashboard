@@ -1,6 +1,11 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
+
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <Box>
+      <Header title={"Contact"}/>
+    </Box>
   )
 }
 

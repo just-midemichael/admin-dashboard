@@ -1,6 +1,10 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
 
 export const Geography = () => {
   return (
-    <div>geography</div>
+    <Box>
+      <Header title={"Geography Chart"}/>
+    </Box>
   )
 }

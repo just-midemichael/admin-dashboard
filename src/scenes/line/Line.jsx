@@ -1,7 +1,11 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
 
 const Line = () => {
   return (
-    <div>Line</div>
+    <Box>
+      <Header title={"Line Chart"}/>
+    </Box>
   )
 }
 

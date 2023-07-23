@@ -1,7 +1,11 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
 
 
 export const Form = () => {
   return (
-    <div>Form</div>
+    <Box>
+    <Header title={"Form"}/>
+    </Box>
   )
 }

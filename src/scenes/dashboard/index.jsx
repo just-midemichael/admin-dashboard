@@ -6,7 +6,7 @@ import Header from "../../components/admin/header/Header"
 const Dashboard = () => {
   return (
     <Box>
-      <Header title={"Dashboard"} subtitle={"welcome to your dashboard"}/>
+      <Header title={"Dashboard"} subtitle={"Welcome to your dashboard"}/>
     </Box>
   )
 }

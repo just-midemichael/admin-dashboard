@@ -1,7 +1,11 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
 
 
 export const Invoices = () => {
   return (
-    <div>Invoice</div>
+    <Box>
+      <Header title={"Invoices"}/>
+    </Box>
   )
 }

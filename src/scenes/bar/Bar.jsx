@@ -1,7 +1,11 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
 
 const Bar = () => {
   return (
-    <div>Bar</div>
+    <Box>
+      <Header title={"Bar Chart"}/>
+    </Box>
   )
 }
 
