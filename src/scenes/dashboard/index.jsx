@@ -1,6 +1,13 @@
+import { Box } from "@mui/material"
+import Header from "../../components/admin/header/Header"
+
+
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <Box>
+      <Header title={"Dashboard"} subtitle={"welcome to your dashboard"}/>
+    </Box>
   )
 }
 
