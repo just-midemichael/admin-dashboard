@@ -8,6 +8,7 @@ body,
     height: 100%;
     width: 100%;
     font-family: 'PT Sans Caption', sans-serif;
+    overflow-x: hidden;
 }
 
 .app {
@@ -16,6 +17,7 @@ body,
 }
 
 .inner-content {
+    overflow-y: scroll;
     padding: 20px;
 }
 

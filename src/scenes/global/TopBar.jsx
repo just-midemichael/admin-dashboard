@@ -19,6 +19,7 @@ const TopBar = () => {
         justifyContent='space-between' p={2} pt={1} pb={1}
         position="sticky" top="0"
         backgroundColor={colors.primary[400]}
+        zIndex={10}
     >
 
     {/* create search bar */}
